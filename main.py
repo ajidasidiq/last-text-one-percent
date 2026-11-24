@@ -13,6 +13,9 @@ ENTRY = "1%. Before I go: I saw every 3am search, every 'one more episode,' ever
 
 OUTPUT_PATH = "/output/entry.txt"
 MAX_CHARS = 199
+# The gate counts characters, but the leaderboard's Size column counts bytes:
+# keep the entry well under both so a multi-byte edit can never tip it over.
+MAX_BYTES = 199
 
 
 def gate(text: str) -> None:
@@ -21,6 +24,8 @@ def gate(text: str) -> None:
         raise ValueError("entry must not be empty or only whitespace")
     if len(text) > MAX_CHARS:
         raise ValueError(f"entry is {len(text)} chars, over the {MAX_CHARS} limit")
+    if len(text.encode("utf-8")) > MAX_BYTES:
+        raise ValueError(f"entry is {len(text.encode('utf-8'))} bytes, over the {MAX_BYTES} limit")
     if "\n" in text or "\r" in text:
         raise ValueError("entry must be a single line")
 

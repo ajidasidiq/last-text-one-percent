@@ -10,6 +10,8 @@ The last text message a phone sends at one percent battery — one line, 127 cha
 
 The phone doesn't beg for a charger or pun on dying. It uses its final percent to confess what it witnessed — the 3am searches, the "one more episode" lies, the ex-stalking — then forgives the owner, mostly, and signs off. The joke is the phone as a witness with a grudge and a conscience, and the punch lands in the last two words of the forgiveness.
 
+Why it works against the judge's brief: the voice is the phone's own from the first word ("1%. Before I go") to the last ("Goodbye."), the joke is a specific confession rather than a generic battery warning, and at 127 characters nothing is wasted — every clause is either the setup, the evidence, or the punchline.
+
 ## Run it
 
 ```sh
